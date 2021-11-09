@@ -1,0 +1,29 @@
+:root {
+  --main-font-color: #475364;
+  --secondary-font-color: #8ea4b5;
+
+  --primary-color: #323a45;
+  --primary-dark-color: #29313c;
+  --menu-secondary-color: #00d4ff;
+
+  --score-5-color: #67c600;
+  --score-4-color: #abd02d;
+  --score-3-color: #dae700;
+  --score-2-color: #ffa800;
+  --score-1-color: #ff5d00;
+
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* reset */
+
+body {
+  margin: 0;
+  padding: 0;
+}
