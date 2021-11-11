@@ -19,7 +19,7 @@
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#">
-              <svg class="menu__icon">
+              <svg class="menu__icon" width="18" height="16">
                 <use href="#home"></use>
               </svg>
               Home
@@ -27,14 +27,14 @@
           </li>
           <li class="menu__item menu__item_active">
             <a class="menu__link" href="#">
-              <svg class="menu__icon">
+              <svg class="menu__icon" width="18" height="16">
                 <use href="#clients"></use>
               </svg>
               Clients
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#" width="18" height="16">
               <svg class="menu__icon">
                 <use href="#reports"></use>
               </svg>
@@ -51,30 +51,33 @@
 
       <div class="helper-panel">
         <button class="button button_outline" type="button">
-          <svg class="button__icon">
+          <svg class="button__icon" width="12" height="16">
             <use href="#bookmark"></use>
           </svg>
           Избранные
         </button>
         <button class="button button_primary">
-          <svg class="button__icon">
+          <svg class="button__icon" width="12" height="12">
             <use href="#add"></use>
           </svg>
           Добавить соискателя
         </button>
       </div>
 
-      <table>
+      <table class="table">
         <thead>
           <tr>
-            <th>Соискатель</th>
-            <th>Телефон</th>
-            <th>E-mail</th>
-            <th>Оценка</th>
+            <th class="table__field1">Соискатель</th>
+            <th class="table__field2">Телефон</th>
+            <th class="table__field3">E-mail</th>
+            <th class="table__field4">Оценка соискателя</th>
+            <th class="table__field5">
+              <span class="sr-only"> Действия </span>
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr data-client-id="1">
             <td>
               <div class="client">
                 <div class="client__avatar">
@@ -82,27 +85,327 @@
                     class="client__photo"
                     src="/images/clients/1.jpg"
                     alt=""
-                    style="left: -15px"
+                    style="left: -15px; top: -5"
                   />
                 </div>
                 <h5 class="client__name">Бинман Иван Натанович</h5>
-                <p class="client__vacancy">Full-stack разработчик</p>
+                <p class="client__vacancy info">Full-stack разработчик</p>
               </div>
             </td>
-            <td>
-              +7 (900) 800-70-60
-              <span class="info">Показать еще 1 номер</span>
+            <td class="cell_phone">
+              <b class="table__value"> +7 (900) 800-70-60 </b>
+              <p class="info">Показать еще 1 номер</p>
+            </td>
+            <td class="cell_mail">
+              <b class="table__value"> ioan@binman.ru </b>
+              <p class="info">Показать еще 1 email</p>
             </td>
             <td>
-              ioan@binman.ru
-              <span class="info">Показать еще 1 email</span>
+              <div class="raiting raiting_4">
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+              </div>
+              <p class="info rating-mark">
+                <b class="rating-mark__value">4.0</b>
+              </p>
             </td>
-            <td class="">4.0</td>
+            <td class="table__actions">
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Смотреть резюме"
+              >
+                <svg class="button__icon" width="14" height="18">
+                  <use href="#resume"></use>
+                </svg>
+                <span class="sr-only"> Смотреть резюме </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Убрать в архив"
+              >
+                <svg class="button__icon" width="16" height="16">
+                  <use href="#archive"></use>
+                </svg>
+                <span class="sr-only"> Убрать в архив </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Добавить в избранное"
+              >
+                <svg class="button__icon" width="12" height="16">
+                  <use href="#bookmark"></use>
+                </svg>
+                <span class="sr-only"> Добавить в избранное </span>
+              </button>
+            </td>
+          </tr>
+          <tr data-client-id="2">
+            <td>
+              <div class="client">
+                <div class="client__avatar">
+                  <img
+                    class="client__photo"
+                    src="/images/clients/2.jpg"
+                    alt=""
+                    style="left: -35px; top: -20px"
+                  />
+                </div>
+                <h5 class="client__name">Дурков Павел Валерьевич</h5>
+                <p class="client__vacancy info">Full-stack разработчик</p>
+              </div>
+            </td>
+            <td class="cell_phone cell_no-phone">Телефон не указан</td>
+            <td class="cell_mail">
+              <b class=""> durkov@vkontakte.com </b>
+            </td>
+            <td>
+              <div class="raiting raiting_1">
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+              </div>
+              <p class="info rating-mark">
+                <b class="rating-mark__value">1.0</b>
+              </p>
+            </td>
+            <td class="table__actions">
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Смотреть резюме"
+              >
+                <svg class="button__icon" width="14" height="18">
+                  <use href="#resume"></use>
+                </svg>
+                <span class="sr-only"> Смотреть резюме </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Убрать в архив"
+              >
+                <svg class="button__icon" width="16" height="16">
+                  <use href="#archive"></use>
+                </svg>
+                <span class="sr-only"> Убрать в архив </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Добавить в избранное"
+              >
+                <svg class="button__icon" width="12" height="16">
+                  <use href="#bookmark"></use>
+                </svg>
+                <span class="sr-only"> Добавить в избранное </span>
+              </button>
+            </td>
+          </tr>
+          <tr data-client-id="3">
+            <td>
+              <div class="client">
+                <div class="client__avatar">
+                  <img
+                    class="client__photo"
+                    src="/images/clients/3.jpg"
+                    alt=""
+                    style="left: -3px; top: -5px"
+                  />
+                </div>
+                <h5 class="client__name">Лебедин Артеймий Андреевич</h5>
+                <p class="client__vacancy info">Web-дизайнер</p>
+              </div>
+            </td>
+            <td class="cell_phone">
+              <b class="table__value"> +7 (900) 800-70-60 </b>
+            </td>
+            <td class="cell_mail">
+              <b class="table__value"> design@lebedin.ru </b>
+            </td>
+            <td>
+              <div class="raiting raiting_3">
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+              </div>
+              <p class="info rating-mark">
+                <b class="rating-mark__value">3.0</b>
+              </p>
+            </td>
+            <td class="table__actions">
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Смотреть резюме"
+              >
+                <svg class="button__icon" width="14" height="18">
+                  <use href="#resume"></use>
+                </svg>
+                <span class="sr-only"> Смотреть резюме </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Убрать в архив"
+              >
+                <svg class="button__icon" width="16" height="16">
+                  <use href="#archive"></use>
+                </svg>
+                <span class="sr-only"> Убрать в архив </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Добавить в избранное"
+              >
+                <svg class="button__icon" width="12" height="16">
+                  <use href="#bookmark"></use>
+                </svg>
+                <span class="sr-only"> Добавить в избранное </span>
+              </button>
+            </td>
+          </tr>
+          <tr data-client-id="4">
+            <td>
+              <div class="client">
+                <div class="client__avatar client__avatar_no-avatar">
+                  <svg><use href="#no-photo"></use></svg>
+                </div>
+                <h5 class="client__name">Чулков Олег</h5>
+                <p class="client__vacancy info">Web-дизайнер</p>
+              </div>
+            </td>
+            <td class="cell_phone cell_no-phone">Телефон не указан</td>
+            <td class="cell_mail cell_no-mail">Email не указан</td>
+            <td>
+              <div class="raiting raiting_2">
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+              </div>
+              <p class="info rating-mark">
+                <b class="rating-mark__value">2.0</b>
+              </p>
+            </td>
+            <td class="table__actions">
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Смотреть резюме"
+              >
+                <svg class="button__icon" width="14" height="18">
+                  <use href="#resume"></use>
+                </svg>
+                <span class="sr-only"> Смотреть резюме </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Убрать в архив"
+              >
+                <svg class="button__icon" width="16" height="16">
+                  <use href="#archive"></use>
+                </svg>
+                <span class="sr-only"> Убрать в архив </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Добавить в избранное"
+              >
+                <svg class="button__icon" width="12" height="16">
+                  <use href="#bookmark"></use>
+                </svg>
+                <span class="sr-only"> Добавить в избранное </span>
+              </button>
+            </td>
+          </tr>
+          <tr data-client-id="5">
+            <td>
+              <div class="client">
+                <div class="client__avatar">
+                  <img
+                    class="client__photo"
+                    src="/images/clients/4.jpg"
+                    alt=""
+                    style="left: -15px; top: -10px"
+                  />
+                </div>
+                <h5 class="client__name">Федора Линукс Линусович</h5>
+                <p class="client__vacancy info">Front-end разработчик</p>
+              </div>
+            </td>
+            <td class="cell_phone">
+              <b class="table__value"> +7 (900) 800-70-60 </b>
+              <p class="info">Показать еще 1 номер</p>
+            </td>
+            <td class="cell_mail">
+              <b class="table__value"> ioan@binman.ru </b>
+              <p class="info">Показать еще 1 email</p>
+            </td>
+            <td>
+              <div class="raiting raiting_5">
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+                <svg class="icon_star"><use href="#star-stroke"></use></svg>
+              </div>
+              <p class="info rating-mark">
+                <b class="rating-mark__value">5.0</b>
+              </p>
+            </td>
+            <td class="table__actions">
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Смотреть резюме"
+              >
+                <svg class="button__icon" width="14" height="18">
+                  <use href="#resume"></use>
+                </svg>
+                <span class="sr-only"> Смотреть резюме </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Убрать в архив"
+              >
+                <svg class="button__icon" width="16" height="16">
+                  <use href="#archive"></use>
+                </svg>
+                <span class="sr-only"> Убрать в архив </span>
+              </button>
+              <button
+                class="button button_outline button__short"
+                type="button"
+                title="Добавить в избранное"
+              >
+                <svg class="button__icon" width="12" height="16">
+                  <use href="#bookmark"></use>
+                </svg>
+                <span class="sr-only"> Добавить в избранное </span>
+              </button>
+            </td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="4">Показать еще</td>
+            <td colspan="5">
+              <button class="link">Показать еще</button>
+            </td>
           </tr>
         </tfoot>
       </table>
@@ -110,34 +413,72 @@
 
     <!-- Встроенные SVG -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="home" viewBox="0 0 18 16">
+      <symbol id="home" viewBox="0 0 18 16" width="18" height="16">
         <path
           d="M18 9L15 5.76965V2H13V4.09619L9 0L0 9L0 10H2V16H7V11H11V16H16V10H18V9Z"
           fill="currentColor"
         />
       </symbol>
-      <symbol id="clients" viewBox="0 0 18 16">
+      <symbol id="clients" viewBox="0 0 18 16" width="18" height="16">
         <path
           d="M12.9361 5.31277C12.8298 4.2301 12.2462 3.29738 11.414 2.74619C11.436 1.22646 12.6075 0.000474545 14.0516 0C15.5097 0 16.6915 1.24829 16.6915 2.78843C16.6915 4.32833 15.5097 5.57662 14.0516 5.57662C13.6522 5.57662 13.2755 5.48028 12.9361 5.31277ZM11.7727 5.66702C11.7727 7.20692 10.5909 8.45544 9.13276 8.45544C7.67488 8.45544 6.4924 7.20715 6.4924 5.66725C6.4924 4.12736 7.67488 2.87883 9.13276 2.87883C10.5906 2.87883 11.7727 4.12712 11.7727 5.66702ZM10.2526 9.33691H8.0125C6.14871 9.33691 5 10.2473 5 12.216V15.1548C5 15.1548 6.93965 16 9.42389 16C11.9081 16 14 14.7837 14 14.7837V12.216C14.0007 10.2473 12.1164 9.33691 10.2526 9.33691ZM12.7768 6.5H14.9996C16.8631 6.5 18 7.3685 18 9.33691V12C18 12 17.1947 13.027 15 13.1119V12.2202C15 9.33691 11.5 8.5 11.5 8.5C11.5 8.5 12.7528 7.43936 12.7768 6.5ZM4.01724 5.57709C4.53368 5.57709 5.01417 5.41788 5.42121 5.14668C5.5506 4.25525 6.00302 3.47628 6.64929 2.94574C6.6501 2.93006 6.65109 2.91441 6.65209 2.89878L6.65209 2.89876C6.6544 2.86236 6.6567 2.82598 6.6567 2.78914C6.6567 1.249 5.47468 0.000711818 4.01724 0.000711818C2.55891 0.000711818 1.37733 1.249 1.37733 2.78914C1.37733 4.32856 2.55891 5.57709 4.01724 5.57709ZM5.48896 6.5C5.51559 7.40007 6.5 8.5 6.5 8.5C6.5 8.5 4 9.33691 4 12.2202V13.0941C1.61475 13.7778 0 12 0 12V9.33691C0 7.3685 1.13733 6.5 3.00112 6.5H5.48896Z"
           fill="currentColor"
         />
       </symbol>
-      <symbol id="reports" viewBox="0 0 18 16">
+      <symbol id="reports" viewBox="0 0 18 16" width="18" height="16">
         <path
           d="M1 15.6423C1 15.8374 1.14885 16 1.33588 16H3.66412C3.84733 16 4 15.8415 4 15.6423V9.45068L2.30916 11.2515C1.95038 11.6295 1.63202 12.0193 1 12.0193V15.6423ZM5 15.6447C5 15.8385 5.14886 16 5.33588 16H7.66412C7.84733 16 8 15.8425 8 15.6447V11.5546L5 8.48596V15.6447ZM9 15.7012C9 15.8642 9.14886 16 9.33588 16H11.6641C11.8473 16 12 15.8676 12 15.7012V8.80981L9.33588 11.6112C9.23282 11.7029 9.11832 11.7515 9 11.8194V15.7012ZM13 7.78992V15.6856C13 15.8571 13.1489 16 13.3359 16H15.6641C15.8473 16 16 15.8607 16 15.6856V4.6543L13 7.78992ZM17.3348 0C17.3152 0 17.2918 0 17.2723 0C16.1637 0.0525784 15.059 0.109201 13.9504 0.16178C13.8021 0.169869 13.5991 0.177958 13.4391 0.343782C13.3883 0.39636 13.3493 0.457027 13.3181 0.529828C13.1541 0.897877 13.3844 1.1365 13.4937 1.24975L13.7709 1.54095C13.9621 1.74317 14.1573 1.9454 14.3525 2.14358L8.65407 8.08797L5.64447 4.96967C5.46491 4.78362 5.22289 4.67846 4.96526 4.67846C4.70763 4.67846 4.46951 4.78362 4.28995 4.96967L0.281052 9.11931C-0.0936841 9.50758 -0.0936841 10.1345 0.281052 10.5227L0.460614 10.7088C0.640175 10.8948 0.882192 11 1.13982 11C1.39745 11 1.63557 10.8948 1.81513 10.7088L4.96526 7.44489L7.97486 10.5632C8.15442 10.7492 8.39644 10.8544 8.65407 10.8544C8.9117 10.8544 9.14982 10.7492 9.33328 10.5632L15.8905 3.73306L16.7453 4.61476C16.8468 4.71992 16.9874 4.86552 17.202 4.86552C17.2918 4.86552 17.3816 4.84125 17.4753 4.78868C17.5377 4.75227 17.5924 4.71183 17.6392 4.6633C17.8071 4.48938 17.8383 4.26694 17.8461 4.09302C17.8773 3.34884 17.9125 2.60465 17.9476 1.85642L17.9984 0.736097C18.0101 0.501517 17.9593 0.319515 17.8383 0.190091C17.7251 0.0647118 17.5534 0 17.3348 0Z"
           fill="currentColor"
         />
       </symbol>
-      <symbol id="bookmark" viewBox="0 0 12 16">
+      <symbol id="bookmark" viewBox="0 0 12 16" width="12" height="16">
         <path
           d="M12 16V2C12 2 12 0 10 0L2 0C0 0 0 2 0 2V16L6 12L12 16Z"
           fill="currentColor"
         />
       </symbol>
-      <symbol id="add" viewBox="0 0 12 12">
+      <symbol id="add" viewBox="0 0 12 12" width="12" height="12">
         <path
           d="M7 5V1C7 1 7 0 6 0C5 0 5 1 5 1V5H1C1 5 0 5 0 6C0 7 1 7 1 7H5V11C5 11 5 12 6 12C7 12 7 11 7 11V7H11C11 7 12 7 12 6C12 5 11 5 11 5H7Z"
           fill="currentColor"
+        />
+      </symbol>
+      <symbol id="archive" viewBox="0 0 16 16" width="16" height="16">
+        <path
+          d="M1 4H15V14C15 14 14.6785 16 13 16H3C1 16 1 14 1 14V4ZM7 6H9V10H11L8 14L5 10H7V6ZM1 0H15C16 0 16 1 16 1V3H0V1C0 1 0 0 1 0Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="mail" viewBox="0 0 14 14" width="14" height="14">
+        <path
+          d="M14 3.00256L6.99999 7L0 3.00256V2C0 2 0 0 2 0H12C14 0 14 2 14 2V3.00256ZM0 4L7 8L14 4V10C14 10 14 12 12 12H2C0 12 0 10 0 10V4Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="no-photo" viewBox="0 0 16 14" width="16" height="14">
+        <path
+          d="M14 2H12C12 2 11 0 10 0H6C4.99414 0 4 2 4 2H2C0 2 0 4 0 4V12C0 12 0 14 2 14H14C16 14 16 12 16 12V4C16 4 16 2 14 2ZM10.8259 10.8258C10.0431 11.6085 9.10126 12 7.99998 12C6.89871 12 5.9569 11.6085 5.17411 10.8258C4.39132 10.0431 4 9.10105 4 8.00003C4 6.89867 4.39144 5.95689 5.17411 5.1741C5.9568 4.39132 6.89874 4 7.99998 4C9.10123 4 10.0431 4.39141 10.8259 5.1741C11.6086 5.9568 12 6.89867 12 8.00003C12 9.10105 11.6087 10.043 10.8259 10.8258ZM6.58681 6.58687C6.97801 6.19561 7.44907 6 8 6C8.55086 6 9.02199 6.19563 9.41317 6.58687C9.80437 6.9781 10 7.44909 10 8.00013C10 8.551 9.80437 9.02204 9.41317 9.41325C9.02196 9.80439 8.55086 10 8 10C7.44904 10 6.97801 9.80439 6.58681 9.41325C6.1956 9.02204 6 8.55098 6 8.00013C6 7.44907 6.1956 6.97808 6.58681 6.58687Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="phone" viewBox="0 0 14 14" width="14" height="14">
+        <path
+          d="M13.9933 11.0487C14.023 11.2761 13.9537 11.4739 13.7858 11.6419L11.8147 13.5995C11.7257 13.6983 11.6097 13.7825 11.4664 13.8516C11.3231 13.9208 11.1824 13.9653 11.0441 13.9851C11.0342 13.9851 11.0045 13.9876 10.9551 13.9926C10.9057 13.9975 10.8415 14 10.7625 14C10.5747 14 10.2708 13.9679 9.85091 13.9036C9.43098 13.8393 8.91722 13.6811 8.30961 13.429C7.70186 13.1769 7.01272 12.7987 6.24206 12.2945C5.4714 11.7903 4.65129 11.0982 3.7818 10.2182C3.09017 9.536 2.51709 8.88346 2.06259 8.2606C1.60808 7.6377 1.2425 7.06178 0.965848 6.53283C0.689168 6.00387 0.481677 5.52435 0.343349 5.09427C0.205021 4.66419 0.111156 4.29342 0.0617534 3.98198C0.0123507 3.67054 -0.00741041 3.42584 0.00247014 3.24788C0.0123507 3.06991 0.017291 2.97104 0.017291 2.95127C0.0370521 2.81285 0.0815145 2.67196 0.150678 2.5286C0.219842 2.38524 0.303827 2.26906 0.402632 2.18008L2.3738 0.207627C2.51213 0.0692089 2.67022 0 2.84807 0C2.97652 0 3.09014 0.0370762 3.18895 0.111229C3.28775 0.185381 3.37174 0.276836 3.4409 0.385593L5.02673 3.39618C5.11565 3.55437 5.14036 3.72739 5.10083 3.91525C5.06131 4.1031 4.97733 4.26129 4.84888 4.38982L4.12266 5.11652C4.1029 5.13629 4.08561 5.16842 4.07079 5.21291C4.05596 5.25741 4.04855 5.29448 4.04855 5.32414C4.08808 5.53177 4.177 5.76906 4.31533 6.03601C4.4339 6.27329 4.61669 6.56249 4.8637 6.90359C5.11071 7.24469 5.46147 7.63767 5.91598 8.08259C6.3606 8.53744 6.75583 8.89085 7.10164 9.14302C7.44739 9.39504 7.73649 9.58049 7.96869 9.69914C8.20088 9.81778 8.37873 9.88946 8.50221 9.91411L8.68742 9.95121C8.70718 9.95121 8.73937 9.94377 8.78378 9.92896C8.82825 9.91411 8.86036 9.89683 8.88014 9.87703L9.72491 9.01686C9.90285 8.85869 10.1102 8.7796 10.3474 8.7796C10.5154 8.7796 10.6487 8.80923 10.7475 8.86858H10.7623L13.6227 10.5593C13.8303 10.6879 13.9538 10.851 13.9933 11.0487Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="resume" viewBox="0 0 14 18" width="14" height="18">
+        <path
+          d="M12 18C14 18 14 16 14 16V2C14 2 14 0 12 0H5V5H0V16C0 16 0 18 2 18H12ZM3 14V13H7V14H3ZM3 11V10H11V11H3ZM11 7V8H3V7H11ZM4 0L0 4H4V0Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="star-stroke" viewBox="0 0 15 15" width="15" height="15">
+        <path
+          d="M7.48862 2.35161L8.7929 5.1055L8.79374 5.10726C9.00715 5.55559 9.42242 5.87182 9.91225 5.95368L9.92067 5.95508L9.92912 5.95635L12.9239 6.40438L10.7326 8.65792C10.7317 8.65874 10.7309 8.65957 10.7301 8.6604C10.3763 9.02207 10.2379 9.52441 10.318 9.99515L10.8346 13.1064L8.23492 11.681C7.76733 11.4199 7.23322 11.4505 6.81499 11.6702L6.8043 11.6758L6.79375 11.6817L4.1993 13.1252L4.69828 10.0065L4.69832 10.0065L4.69956 9.99827C4.76983 9.53433 4.632 9.04121 4.27894 8.68174L4.27934 8.68215L3.56539 9.38235L4.27863 8.68143M7.48862 2.35161L4.27863 8.68143M7.48862 2.35161L6.20405 5.10783C5.9923 5.57023 5.56894 5.88439 5.08402 5.96543L5.07342 5.9672L5.07341 5.96714L2.07555 6.43507L4.27863 8.68143M7.48862 2.35161L4.27863 8.68143"
+          fill="transparent"
+          stroke="currentColor"
+          stroke-width="2"
         />
       </symbol>
     </svg>
