@@ -73,7 +73,7 @@ body {
   position: relative;
   display: inline-block;
   border: 0;
-  padding: 13px 16px 12px 33px;
+  padding: 13px 16px 12px;
   height: 36px;
   box-sizing: inherit;
 
@@ -111,6 +111,10 @@ body {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
+}
+
+.button-icon_left {
+  padding-left: 33px;
 }
 
 .button__short {
@@ -226,9 +230,9 @@ body {
   position: relative;
   margin-left: 80px;
   margin-top: 66px;
-  padding: 20px 30px;
+  padding: 20px 30px 0;
   background-color: var(--background-color);
-  min-height: calc(100vh - 69px);
+  min-height: calc(100vh - 66px);
 
   overflow-x: auto;
 }
@@ -450,12 +454,6 @@ tfoot {
   color: var(--score-5-color);
 }
 
-/* Закрашиваем звездочки */
-
-.raiting .star-path {
-  fill: currentColor;
-}
-
 .rating-mark::before {
   content: "Средний балл: ";
   color: var(--secondary-font-color);
@@ -539,10 +537,8 @@ tfoot {
 
 .modal__dropdown {
   position: fixed;
-  /* left: 80px; */
   left: 0;
   right: 0;
-  /* top: 66px; */
   top: 0;
   bottom: 0;
   background-color: rgba(71, 83, 100, 0.8);
@@ -586,7 +582,6 @@ tfoot {
 
 .modal__close::after {
   content: "\00D7";
-  /* text-indent: ; */
   font-size: 2em;
   line-height: 1;
   text-transform: uppercase;
@@ -598,7 +593,6 @@ tfoot {
 
 .form__field {
   padding: 0;
-  /* padding-top: 4px; */
   padding-bottom: 20px;
   margin: 0;
   border: none;
@@ -637,7 +631,6 @@ tfoot {
   display: block;
   font-size: 11px;
   line-height: 12px;
-  /* margin-bottom: 1px; */
 }
 
 .form__heading-2 + * {
@@ -687,7 +680,6 @@ tfoot {
   padding: 8px 12px;
   padding-left: 10px;
   font-size: 10px;
-  /* font-weight: bold; */
   line-height: 1;
   letter-spacing: -0.03em;
   color: var(--white-color);
