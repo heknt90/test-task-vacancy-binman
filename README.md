@@ -10,7 +10,7 @@
 [Демонстрация верстки](https://heknt90.github.io/test-task-vacancy-binman/) |
 [Ссылка на макет](https://www.figma.com/file/WM4oyMFV9EuMHfkMzYGBD0/2019-11-04-test?node-id=0%3A1/)
 
-![](cover.JPG/)
+![](cover.png/)
 
 В процессе верстки использовались:
 
